@@ -117,11 +117,61 @@ namespace dotnet_prework_code_challenges
             Console.WriteLine($"Problem 3 output: {PerfectSequence(numbers4)}.");
         }
 
+        public static int[] SumOfRows (int width, int length)
+        {
+            Random rand = new Random();
+
+            int[,] myArray = new int[width, length];
+
+            //int[,] myArray = new int[3, 5] { { 1, 2, 3, 4, 5 }, { 6, 7, 8, 9, 10 }, { 11, 12, 13, 14, 15 } };
+
+            // This is much slower
+            //for (int i = 0; i < myArray.GetLength(0); i++)
+            //{
+            //    for (int j = 0; j < myArray.GetLength(1); j++)
+            //    {
+            //        myArray[i, j] = rand.Next(1, 11);
+            //    }               
+            //}
+
+            // Still O^n
+            int[] outputArray = new int[width];
+            for (int i = 0; i < myArray.GetLength(0); i++)
+            {
+                int rowCounter = 0;
+                for (int j = 0; j < myArray.GetLength(1); j++)
+                {
+                    myArray[i, j] = rand.Next(1, 11);
+                    rowCounter += myArray[i,j];
+                }
+                outputArray[i] = rowCounter;
+            }
+
+            return outputArray;
+
+        }
+
+        public static void problem4Caller()
+        {
+            Console.Write("Enter the # of rows: ");
+            int rows = int.Parse(Console.ReadLine());
+            Console.Write("Enter the # of columns: ");
+            int columns = int.Parse(Console.ReadLine());
+
+            int[] sums = SumOfRows(rows, columns);
+
+            foreach (int numbers in sums)
+            {
+                Console.WriteLine(numbers);
+            }
+        }
+
         static void Main(string[] args)
         {
-            //Console.WriteLine($"Problem 1 output: {problem1Caller()}.");
-            //Console.WriteLine($"Problem 2 output: {problem2Caller()}.");
+            Console.WriteLine($"Problem 1 output: {problem1Caller()}.");
+            Console.WriteLine($"Problem 2 output: {problem2Caller()}.");
             problem3Caller();
+            problem4Caller();
 
             Console.ReadLine();
         }
