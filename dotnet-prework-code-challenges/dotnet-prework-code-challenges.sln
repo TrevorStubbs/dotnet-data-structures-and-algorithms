@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30225.117
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dotnet-prework-code-challenges", "dotnet-prework-code-challenges\dotnet-prework-code-challenges.csproj", "{B96B4458-BF4D-4174-AC78-094800E49608}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B96B4458-BF4D-4174-AC78-094800E49608}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B96B4458-BF4D-4174-AC78-094800E49608}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B96B4458-BF4D-4174-AC78-094800E49608}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B96B4458-BF4D-4174-AC78-094800E49608}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FC7E96AB-3B8E-4646-AC06-A06425AB313A}
+	EndGlobalSection
+EndGlobal
